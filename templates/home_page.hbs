@@ -1,0 +1,225 @@
+<!--<section class="section hero">-->
+  <!--<div class="hero-inner">-->
+    <!--{{search submit=false instant=settings.instant_search class='search search-full'}}-->
+  <!--</div>-->
+<!--</section>-->
+<!--my own code-->
+
+
+<div id="hero-banner" data-page="home">
+    <div class="hero-container" data-alignment="left" data-font="dark" style="background-image:url({{settings.homepage_background_image}});">
+        <div class="hero-content">
+            <h1 class="white-text" style="visibility: hidden;">Suze Orman help</h1>
+            <h5 class="h6-heading white-text" style="visibility: hidden;">Hi, how can we help?</h5>
+            <div class="search-container">
+
+                {{search submit=false instant=settings.instant_search class='search search-full'}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--end-->
+
+<div class="container top-margin">
+
+    <h3>Browse by Product</h3>
+
+<div class="row justify-content-md-center">
+
+            <div class="col-lg-4 col-md-4 col-sm-6 nugget">
+                <div class="hoverNuggets">
+                      <a href="https://suzeorman.zendesk.com/hc/en-us/sections/115001655147" class="small-nugget nugget-title"><img src="{{asset 'personal_finance_course.svg'}}" width="26"/><span style="margin-left: 10px">Personal Finance Course</span></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 nugget">
+                <div class="hoverNuggets">
+                      <a href="https://suzeorman.zendesk.com/hc/en-us/categories/115000926688" class="small-nugget nugget-title"><img src="{{asset 'mhd.svg'}}" width="26"/><span style="margin-left: 10px">Must Have Documents</span></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 nugget">
+                <div class="hoverNuggets">
+                      <a href="https://suzeorman.zendesk.com/hc/en-us/sections/115001665908" class="small-nugget nugget-title"><img src="{{asset 'insurance_selector.svg'}}" width="26"/><span style="margin-left: 10px">Insurance Selector</span></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 nugget">
+                <div class="hoverNuggets">
+                      <a href="https://suzeorman.zendesk.com/hc/en-us/categories/115000948648" class="small-nugget nugget-title"><img src="{{asset 'money_tools.svg'}}" width="26"/><span style="margin-left: 10px">The Money Tools</span></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 nugget">
+                <div class="hoverNuggets">
+                      <a href="https://suzeorman.zendesk.com/hc/en-us/categories/115000974908" class="small-nugget nugget-title"><img src="{{asset 'pbs.svg'}}" width="26"/><span style="margin-left: 10px">Public Television Support Box</span></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 nugget">
+                <div class="hoverNuggets">
+                      <a href="https://suzeorman.zendesk.com/hc/en-us/categories/115000974928" class="small-nugget nugget-title"><img src="{{asset 'protection_portfolio.svg'}}" width="26"/><span style="margin-left: 10px">Protection Portfolio</span></a>
+                </div>
+            </div>
+            
+          
+
+
+
+</div>
+    <div class="row justify-content-md-center">
+    {{#each categories}}
+            <div class="col-lg-3 col-md-6 col-sm-12
+            {{#is id 115000926688}}hide-all{{/is}}
+            {{#is id 115000974928}}hide-all{{/is}}
+            {{#is id 115000974948}}hide-all{{/is}}
+            {{#is id 115000974908}}hide-all{{/is}}
+            {{#is id 115000948648}}hide-all{{/is}}
+
+            ">
+                  <div class="cat-section hoverImages" data-link="{{url}}">
+                      {{#is id 115000927348}}<img class="cat-img" src="{{asset 'order_black.svg'}}" width="64" style="background-color: #95A2CC;"/>{{/is}}
+                      {{#is id 115000945407}}<img class="cat-img" src="{{asset 'faq.svg'}}" width="64" style="background-color: #BAC0FF;"/>{{/is}}
+                      {{#is id 115000927328}}<img class="cat-img" src="{{asset 'resources.svg'}}" width="64" style="background-color: #A1A9FF;"/>{{/is}}
+                      {{#is id 115000923947}}<img class="cat-img" src="{{asset 'contact.svg'}}" width="64" style="background-color: #5771C7;"/>{{/is}}
+                      <a href="#">{{name}}</a>
+                  </div>
+          </div>
+    {{/each}}
+
+
+
+  </div>
+
+</div>
+
+<div class="container top-margin">
+    <h3>Browse common questions</h3>
+    <hr>
+    <div class="row">
+                        <div class="col-sm-12">
+
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-account" role="tab" aria-controls="pills-account" aria-selected="true"> <i class="fas fa-credit-card"></i> Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-dataprivacy" role="tab" aria-controls="pills-dataprivacy" aria-selected="false"><i class="fas fa-shield-alt"></i> Data Privacy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-billingpurchases" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-shopping-cart"></i> Billing & Purchases</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false"><i class="fas fa-phone-alt"></i> Contact Us</a>
+                            </li>
+                            </ul>
+
+
+                            <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-account" role="tabpanel" aria-labelledby="pills-account">
+                                <div class="row">
+
+                                    <div class="col-sm-6 top-padding-10">
+                                    <div class="card">
+                                        <div class="card-body">
+                                                <h5 class="card-title"><i class="fas fa-user"></i> Account</h5>
+                                                <ul>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115005643948-Setting-Up-a-New-Profile">Setting Up a New Profile</a> </li>
+                                                    <li><a href="https://www.suzeorman.com/privacy" target="_blank">Privacy Policy</a> </li>
+                                                </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+
+
+
+
+
+                            </div>
+                            </div>
+
+
+                            <div class="tab-pane fade" id="pills-dataprivacy" role="tabpanel" aria-labelledby="pills-dataprivacy">
+                                 
+                                    <div class="col-sm-6 top-padding-10">
+                                        <div class="card">
+                                            <div class="card-body">
+                                           <h5 class="card-title"><i class="fas fa-shield-alt"></i> Data Privacy & Email Preference</h5>
+                                                <ul>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/360006368213-General-Data-Protection-Regulations">General Data Protection Regulations</a> </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-billingpurchases" role="tabpanel" aria-labelledby="pills-billingpurchases">
+                                 
+                                    <div class="col-sm-6 top-padding-10">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="fas fa-shopping-cart"></i> Purchases</h5>
+                                                <ul>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115005742248-Return-Policy-and-Instructions">Return Policy and Instructions</a> </li>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115005576647-Orders-From-HSN">Orders From HSN</a> </li>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/360039841293-Orders-from-Amazon">Orders From Amazon</a> </li>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115006636868-Orders-from-QVC">Orders from QVC</a> </li>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115005646688-Orders-From-SuzeOrman-com">Orders from SuzeOrman.com</a> </li>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115006231967-Orders-From-PBS">Orders from PBS</a> </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                                
+                                <div class="col-sm-6 top-padding-10">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="fas fa-phone-alt"></i> Contact Us</h5>
+                                                <ul>
+                                                    <li><a href="https://suzeorman.zendesk.com/hc/en-us/articles/115005641468-Customer-Care">Customer Care</a> </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                             
+
+                    </div>
+                </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="demo-banner" data-page="home">
+    <div id="demo-banner" class="container">
+        <div class="demo-block" id="chat-block">
+            <div class="container">
+            <h4 class="title">Didn't find the answer? Live Chat with us</h4>
+           <a href="javascript:$zopim.livechat.window.show();"><button class="btn btn-secondary btn-blue">Live Chat</button></a>
+        </div>
+        </div>
+    </div>
+</div>
+
+  <!--{{#if help_center.community_enabled}}-->
+    <!--<section class="section home-section community">-->
+      <!--<h2>{{t 'community'}}</h2>-->
+      <!--{{#link 'community' class='community-link'}}-->
+        <!--{{t 'join_conversation'}}-->
+      <!--{{/link}}-->
+
+      <!--<div class="community-image"></div>-->
+    <!--</section>-->
+  <!--{{/if}}-->
+
+  <!--<section class="section home-section activity">-->
+    <!--{{#if settings.show_recent_activity}}-->
+      <!--{{recent_activity}}-->
+    <!--{{/if}}-->
+  <!--</section>-->
+</div>
