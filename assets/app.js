@@ -15,8 +15,8 @@ $(document).ready(function () {
     $zopim(function() {
     $zopim.livechat.window.setTitle('Suze Orman Live Chat');
     $zopim.livechat.prechatForm.setGreetings(`Please complete the form below, include your question, select start chat and an agent will be right with you.`);
-    $zopim.livechat.departments.filter('Suze Orman'); //sets to only display Suze Orman department
-    $zopim.livechat.departments.setVisitorDepartment('Suze Orman'); //sets to Suze Orman
+    $zopim.livechat.departments.filter('Suze Orman Support'); //sets to only display Suze Orman department
+    $zopim.livechat.departments.setVisitorDepartment('Suze Orman Support'); //sets to Suze Orman
     $zopim.livechat.button.setHideWhenOffline(true); //hides chat when offline
     $zopim.livechat.hideAll(); //makes it so the chat button doesn't auto-appear on the page
     $zopim.livechat.setOnStatus(checkStatus); //checks if offline
